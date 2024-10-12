@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Anmeldung - Kaffee Klatsch</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="header-container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.png" alt="Logo Kaffee Klatsch, zurück zur Startseite">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="menu.html">DRINKS AND FOOD</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><span class="active">RESERVIERUNG</span></li>
+                <li><a href="ueber uns.html">ÜBER UNS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="hero about-us-hero">
+            <img src="../assets/images/reservierung.jpg" alt="">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Event-Anmeldung</h1>
+                    <p>Sichere dir deinen Platz bei unseren spannenden Events</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="reservation" class="section container">
+            
+            <div class="reservation-form-container">
+                <form class="reservation-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="event">Event auswählen:</label>
+                        <select id="event" name="event" required>
+                            <option value="">Bitte wählen</option>
+                            <option value="kaffee-verkostung">Kaffee-Verkostung (15. Mai 2024, 19:00 Uhr)</option>
+                            <option value="live-musik">Live-Musik Abend (22. Mai 2024, 20:00 Uhr)</option>
+                            <option value="latte-art">Latte Art Workshop (5. Juni 2024, 18:00 Uhr)</option>
+                            <option value="buchclub">Buchclub Treffen (12. Juni 2024, 19:30 Uhr)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Anzahl Personen:</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Bitte wählen</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 Personen</option>
+                            <option value="3">3 Personen</option>
+                            <option value="4">4 Personen</option>
+                            <option value="5">5 Personen</option>
+                            <option value="6+">6 oder mehr Personen</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Besondere Wünsche oder Fragen:</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Anmeldung absenden</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Kaffee Klatsch<br>
+                Musterstrasse 123<br>
+                1234 Muster, Schweiz</p>
+                <p>Tel: <a href="tel:+41440000000">+41 44 000 00 00</a></p>
+                <p>E-Mail: <a href="mailto:info@kaffeeklatsch.ch">info@kaffeeklatsch.ch</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Öffnungszeiten</h3>
+                <p>Montag - Freitag: 08:00 - 20:00<br>
+                Samstag: 09:00 - 18:00<br>
+                Sonntag: 10:00 - 16:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Folge uns</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com" aria-label="Besuche unsere Facebook-Seite">
+                        <img src="../assets/images/facebook.png" alt="Facebook" width="40" height="40">
+                    </a>
+                    <a href="https://instagram.com" aria-label="Folge uns auf Instagram">
+                        <img src="../assets/images/instagram.png" alt="Instagram" width="40" height="40">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Schulungsseite der  <a href="http://www.access-for-all.ch">Stiftung "Zugang für alle"</a>. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+</body>
+</html>
