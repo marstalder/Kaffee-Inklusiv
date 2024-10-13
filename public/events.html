@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Kaffee Klatsch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header-container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.png" alt="Logo Kaffee Klatsch, zurück zur Startseite">
+        </a>
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="menu.html">DRINKS AND FOOD</a></li>
+                <li class="has-dropdown">
+                    <a href="events.html" class="events-link active">EVENTS</a>
+                    <button id="events-dropdown-toggle" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-icon" aria-hidden="true">▼</span>
+                    </button>
+                    <ul class="dropdown" aria-labelledby="events-dropdown-toggle">
+                        <li><a href="konzerte.html">Konzerte</a></li>
+                        <li><a href="lesungen.html">Lesungen</a></li>
+                        <li><a href="workshops.html">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="reservierung.html">RESERVIERUNG</a></li>
+                <li><a href="ueber%20uns.html">ÜBER UNS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="hero about-us-hero">
+            <img src="../assets/images/events.jpg" alt="">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Unsere Events</h1>
+                    <p>Erlebe besondere Momente im Kaffee Klatsch</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="section container">
+            <h2>Entdecke unsere Veranstaltungen</h2>
+            <div class="event-categories">
+                <div class="event-category">
+                    <h3>Konzerte</h3>
+                    <p>Genieße Live-Musik in gemütlicher Atmosphäre.</p>
+                    <a href="konzerte.html" class="button">Mehr erfahren</a>
+                </div>
+                <div class="event-category">
+                    <h3>Lesungen</h3>
+                    <p>Tauche ein in die Welt der Literatur bei unseren Autorenlesungen.</p>
+                    <a href="lesungen.html" class="button">Mehr erfahren</a>
+                </div>
+                <div class="event-category">
+                    <h3>Workshops</h3>
+                    <p>Lerne Neues bei unseren kreativen und lehrreichen Workshops.</p>
+                    <a href="workshops.html" class="button">Mehr erfahren</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="upcoming-events" class="section container">
+            <h2>Kommende Veranstaltungen</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Jazz-Abend mit Trio Swing</button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                        <p><strong>Datum:</strong> 15. Mai 2024, 20:00 Uhr</p>
+                        <p><strong>Beschreibung:</strong> Genießen Sie einen Abend voller Swing und Jazz mit dem bekannten Trio Swing. Perfekt für Musikliebhaber und alle, die einen entspannten Abend suchen.</p>
+                        <a href="reservierung.html" class="button">Platz reservieren</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Lesung: "Kaffeehaus-Geschichten" mit Maria Müller</button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                        <p><strong>Datum:</strong> 22. Mai 2024, 19:00 Uhr</p>
+                        <p><strong>Beschreibung:</strong> Die lokale Autorin Maria Müller liest aus ihrem neuen Buch "Kaffeehaus-Geschichten". Tauchen Sie ein in die faszinierende Welt der Kaffeehauskultur.</p>
+                        <a href="reservierung.html" class="button">Platz reservieren</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Latte Art Workshop</button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                        <p><strong>Datum:</strong> 5. Juni 2024, 15:00 Uhr</p>
+                        <p><strong>Beschreibung:</strong> Lernen Sie die Kunst der Latte Art von unserem erfahrenen Barista-Team. Perfekt für Kaffeeliebhaber und kreative Geister.</p>
+                        <a href="reservierung.html" class="button">Platz reservieren</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Kaffee Klatsch<br>
+                Musterstrasse 123<br>
+                1234 Muster, Schweiz</p>
+                <p>Tel: <a href="tel:+41440000000">+41 44 000 00 00</a></p>
+                <p>E-Mail: <a href="mailto:info@kaffeeklatsch.ch">info@kaffeeklatsch.ch</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Öffnungszeiten</h3>
+                <p>Montag - Freitag: 08:00 - 20:00<br>
+                Samstag: 09:00 - 18:00<br>
+                Sonntag: 10:00 - 16:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Folge uns</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com" aria-label="Besuche unsere Facebook-Seite">
+                        <img src="../assets/images/facebook.png" alt="Facebook" width="40" height="40">
+                    </a>
+                    <a href="https://instagram.com" aria-label="Folge uns auf Instagram">
+                        <img src="../assets/images/instagram.png" alt="Instagram" width="40" height="40">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Schulungsseite der <a href="http://www.access-for-all.ch">Stiftung "Zugang für alle"</a>. Alle Rechte vorbehalten.</p>
+            <p><a href="impressum.html">Impressum</a> | <a href="./public/barrierefreiheit.html">Barrierefreiheitserklärung</a></p>
+        </div>
+    </footer>
+<script>
+    // Warten, bis das DOM vollständig geladen ist
+    document.addEventListener('DOMContentLoaded', function() {
+    var dropdownToggle = document.getElementById('events-dropdown-toggle');
+    var dropdown = document.querySelector('.dropdown');
+    var eventsLink = document.querySelector('.events-link');
+
+    if (dropdownToggle && dropdown) {
+        dropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var expanded = this.getAttribute('aria-expanded') === 'true' || false;
+            this.setAttribute('aria-expanded', !expanded);
+            dropdown.classList.toggle('show');
+            this.querySelector('.dropdown-icon').style.transform = expanded ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+
+        // Prevent the dropdown from closing when clicking inside it
+        dropdown.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!dropdownToggle.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdownToggle.setAttribute('aria-expanded', 'false');
+                dropdown.classList.remove('show');
+                dropdownToggle.querySelector('.dropdown-icon').style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // Ensure the dropdown can be opened with the keyboard
+        dropdownToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    }
+
+    // If we're on the events page, make sure the dropdown stays open if it's supposed to be
+    if (eventsLink && eventsLink.classList.contains('active')) {
+        var urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('dropdown') === 'open') {
+            dropdownToggle.setAttribute('aria-expanded', 'true');
+            dropdown.classList.add('show');
+            dropdownToggle.querySelector('.dropdown-icon').style.transform = 'rotate(180deg)';
+        }
+    }
+});
+    // Akkordeon-Funktionalität
+    var accordionHeaders = document.querySelectorAll('.accordion-header');
+    accordionHeaders.forEach(function(header) {
+        header.addEventListener('click', function() {
+            var expanded = this.getAttribute('aria-expanded') === 'true' || false;
+            this.setAttribute('aria-expanded', !expanded);
+            var content = document.getElementById(this.getAttribute('aria-controls'));
+            if (content) {
+                content.style.maxHeight = !expanded ? content.scrollHeight + "px" : "0";
+                content.setAttribute('aria-hidden', expanded);
+            }
+        });
+    });
+</script>
+</body>
+</html>
