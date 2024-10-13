@@ -1,0 +1,1299 @@
+/* Globale Stile */
+:root {
+    --primary-color: #4a3c31;
+    --secondary-color: #8c7a6b;
+    --accent-color: #d4b483;
+    --background-color: #f5e6d3;
+    --text-color: #333;
+    --nav-active-color: #F5E6D3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+main {
+    margin-bottom: 4rem;
+}
+
+.limited-width {
+    max-width: 800px; /* Maximale Breite wie auf der Homepage */
+    margin: 0 auto; /* Zentriert den Inhalt */
+    padding: 0 2rem; /* Seitenabstand für kleinere Bildschirme */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header und Navigation */
+.header-container {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 0.25rem; /* Reduzierter Abstand zwischen den Elementen */
+}
+
+nav ul li a,
+nav ul li span.active {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-bottom: 2px solid transparent; /* Platzhalter für Unterstreichung */
+}
+
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li span.active,
+nav ul li a.active {
+    color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Stile für das aktive Element */
+nav ul li span.active,
+nav ul li a.active {
+    color: var(--nav-active-color);
+    border-bottom-color: currentColor; /* Unterstreichung in der aktuellen Textfarbe */
+    cursor: default;
+}
+
+/* Fokus-Stil für Tastatur-Navigation */
+nav ul li a:focus,
+nav ul li span.active:focus {
+    outline: 2px solid var(--nav-active-color);
+    outline-offset: 2px;
+}
+
+/* Neue Dropdown Styles */
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-color);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0 0 4px 4px;
+}
+
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    margin: 0;
+}
+
+.dropdown a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown a:hover,
+.dropdown a:focus {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+}
+
+/* Hero-Bereich */
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 4rem; /* Größere Schrift für bessere Sichtbarkeit */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Schatten für bessere Lesbarkeit */
+}
+
+.hero-content p {
+    font-size: 1.5rem; /* Etwas größere Schrift für den Untertitel */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8); /* Leichter Schatten für bessere Lesbarkeit */
+}
+
+/* Willkommensbereich */
+#welcome {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+#welcome h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#welcome p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    padding: 0 2rem;
+    text-align: left;
+}
+
+.welcome-image {
+    max-width: 300px; /* Kleinere feste Breite */
+    height: auto;
+    margin: 2rem auto; /* Abstand oben und unten, zentriert */
+    display: block; /* Damit margin: auto funktioniert */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* CTA-Bereich */
+#cta {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+#cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#cta p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Verteilt die Sektionen gleichmäßig */
+    flex-wrap: nowrap; /* Verhindert das Umbrechen auf größeren Bildschirmen */
+    max-width: 1200px; /* Maximale Breite für größere Bildschirme */
+    margin: 0 auto; /* Zentriert den Inhalt */
+    padding: 0 2rem; /* Seitenabstand */
+}
+
+.footer-section {
+    flex: 1; /* Jede Sektion nimmt den gleichen Platz ein */
+    margin: 0 1rem; /* Horizontaler Abstand zwischen den Sektionen */
+    text-align: center;
+}
+
+.footer-section h3 {
+    margin-bottom: 1.5rem;
+}
+
+.footer-section p,
+.footer-section a {
+    margin-bottom: 0.5rem;
+}
+
+/* Link-Styles im Footer */
+.footer-section a,
+.social-links a,
+.footer-bottom a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover,
+.social-links a:hover,
+.footer-bottom a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.75rem; /* Abstand zwischen den Icons */
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.1); /* Leichte Vergrößerung beim Hover */
+}
+
+.social-links img {
+    max-width: 32px; /* Maximale Breite für alle Icons */
+    max-height: 32px; /* Maximale Höhe für alle Icons */
+    width: auto; /* Erlaubt dem Bild, sein natürliches Seitenverhältnis beizubehalten */
+    height: auto; /* Erlaubt dem Bild, sein natürliches Seitenverhältnis beizubehalten */
+}
+
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--secondary-color);
+}
+
+/* Newsletter Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 550px; /* Erhöhte Breite */
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+    text-align: center; /* Zentriert den gesamten Inhalt */
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.modal-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.modal-content p {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+.newsletter-form button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Zusätzliche Stile für die Über Uns-Seite */
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.team-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+.team-member-info {
+    flex: 1;
+}
+.team-member h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+#team {
+    padding-top: 3rem; /* Erhöht den oberen Abstand */
+    margin-top: 1rem; /* Fügt zusätzlichen Abstand oberhalb des Abschnitts hinzu */
+}
+
+#team h2 {
+    margin-bottom: 3rem; /* Erhöht den Abstand zwischen der Überschrift und den Team-Mitgliedern */
+}
+
+.our-story {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+.our-story .container {
+    max-width: 800px;
+}
+
+.hero.about-us-hero {
+    height: 300px; /* Sie können diesen Wert anpassen */
+    overflow: hidden;
+}
+
+.hero.about-us-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero.about-us-hero .hero-overlay {
+    height: 100%;
+}
+
+/* Anpassung der Schriftgröße für kleinere Hero-Bereiche */
+.hero.about-us-hero .hero-content h1 {
+    font-size: 3rem;
+}
+
+.hero.about-us-hero .hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Menü-Bereich Styles */
+#menu {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.menu-tabs button {
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-tabs button:hover,
+.menu-tabs button:focus {
+    background-color: var(--primary-color);
+}
+
+.menu-tabs button.active {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-content {
+    display: none;
+}
+
+.menu-content.active {
+    display: block;
+}
+
+.menu-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+    /*transition: transform 0.3s ease;*/
+}
+
+/*.menu-item:hover {
+    transform: translateY(-5px);
+}*/
+
+.menu-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+    margin-bottom: 0.5rem;
+}
+
+.menu-item .price {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.menu {
+    /*background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;*/
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.menu h1 {
+    font-size: 3rem; /* Größere Schrift für bessere Sichtbarkeit */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9); /* Schatten für bessere Lesbarkeit */
+}
+
+.menu p {
+    font-size: 1.2rem; /* Etwas größere Schrift für den Untertitel */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.9); /* Leichter Schatten für bessere Lesbarkeit */
+}
+
+
+
+/* Styles für die Kaffee-Vergleichstabelle */
+.coffee-comparison {
+    margin-top: 2rem;
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.coffee-comparison h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.coffee-comparison table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.coffee-comparison th, .coffee-comparison td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.coffee-comparison th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.coffee-comparison tr:nth-child(even) {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.coffee-comparison p {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+ /* Zusätzliche Stile für die Eventseite */
+ .event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+.event-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    text-align: left;
+}
+.event-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+.event-item p {
+    margin-bottom: 0.5rem;
+}
+.event-item .date {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+.event-item .button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+.event-item .button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#events {
+    padding-top: 4rem; /* Erhöht den oberen Abstand */
+}
+
+#events h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem; /* Erhöht den Abstand unter der Überschrift */
+}
+
+
+/* Zusätzliche Stile für die Haupteventseite */
+.event-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.event-category {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.event-category:hover {
+    transform: translateY(-5px);
+}
+
+.event-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.event-category p {
+    margin-bottom: 1.5rem;
+}
+
+.event-category .button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.event-category .button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#upcoming-events {
+    margin-top: 4rem;
+}
+
+#upcoming-events h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+ /* Zusätzliche Stile für die Reservierungsseite */
+
+ .section-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.reservation-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+ .reservation-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+}
+.form-group textarea {
+    height: 100px;
+}
+.submit-button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.submit-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Akkordeon Styles */
+.accordion {
+    margin-top: 2rem;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 4px;
+    overflow:hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header::after {
+    content: '+';
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.accordion-header.active::after {
+    content: '-';
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: white;
+    border: 1px solid var(--secondary-color);
+    border-top: none;
+}
+
+.accordion-content-inner {
+    padding: 1rem;
+}
+
+.accordion-content p {
+    margin: 0.5rem 0;
+}
+
+.accordion-content .button {
+    display: inline-block;
+    margin: 1rem 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-content .button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+/* Styles für die Konzertseite */
+
+/* Galerie für vergangene Konzerte */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Künstlerbewerbung Sektion */
+#artist-application {
+    background-color: var(--background-color);
+    padding: 3rem 0;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#artist-application h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+#artist-application p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Stile für den "Über unsere Konzerte" Abschnitt */
+#about-concerts {
+    background-color: var(--background-color);
+    padding: 2rem 0; /* Vertikaler Innenabstand hinzugefügt */
+}
+
+#about-concerts h2 {
+    color: var(--primary-color);
+    font-size: 2rem; /* Schriftgröße verkleinert */
+    margin-bottom: 1.5rem; /* Vergrößerter Abstand unter der Überschrift */
+    text-align: center; /* Ausrichtung auf mitte gesetzt */
+}
+
+#about-concerts p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Stile für den "Kommende Konzerte" Abschnitt */
+#upcoming-concerts {
+    margin-top: 2rem 0; /* Erhöhter Abstand zum vorherigen Abschnitt */
+    padding: 2rem 0; /* Vertikaler Innenabstand hinzugefügt */
+}
+
+#upcoming-concerts h2 {
+    color: var(--primary-color);
+    font-size: 2rem; /* Schriftgröße verkleinert */
+    margin-bottom: 2rem; /* Vergrößerter Abstand unter der Überschrift */
+    text-align: center; /* Zentrierte Ausrichtung beibehalten */
+}
+
+/* Stile für den "Über unsere Lesungen" Abschnitt */
+#about-readings {
+    background-color: var(--background-color);
+    padding: 2rem 0; /* Vertikaler Innenabstand */
+}
+
+#about-readings h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Zentriert die Überschrift */
+}
+
+#about-readings p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Stile für den "Kommende Lesungen" Abschnitt */
+#upcoming-readings {
+    padding: 2rem 0; /* Vertikaler Innenabstand */ /* Abstand zum vorherigen Abschnitt */
+}
+
+#upcoming-readings h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center; /* Zentriert die Überschrift */
+}
+
+/* Stile für den "Über unsere Workshops" Abschnitt */
+#about-workshops {
+    background-color: var(--background-color);
+    padding: 2rem 0; /* Erhöhter vertikaler Innenabstand */
+}
+
+#about-workshops h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#about-workshops p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Stile für den "Kommende Workshops" Abschnitt */
+#upcoming-workshops {
+    padding: 2rem 0; /* Konsistenter vertikaler Innenabstand */
+}
+
+#upcoming-workshops h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+    background-color: var(--background-color);
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.breadcrumb ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Ausrichtung links, aber innerhalb des Containers */
+}
+
+.breadcrumb li {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: "/";
+    margin: 0 0.5rem;
+    color: var(--secondary-color);
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb [aria-current="page"] {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+/* Impressum Styles */
+.impressum {
+    padding: 4rem 0;
+}
+
+.impressum h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.impressum h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.impressum p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.impressum address {
+    font-style: normal;
+    margin-bottom: 1rem;
+}
+
+.impressum ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.impressum ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    main {
+        margin-bottom: 3rem; /* Etwas weniger Abstand auf kleineren Bildschirmen */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    #welcome {
+        padding: 4rem 0;
+    }
+
+    #welcome h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #welcome p {
+        font-size: 1.1rem;
+    }
+
+    .welcome-image {
+        max-width: 250px; /* Noch kleiner auf mobilen Geräten */
+        margin: 1.5rem auto; /* Etwas weniger Abstand auf kleineren Bildschirmen */
+    }
+
+    #cta h2 {
+        font-size: 2rem;
+    }
+
+    #cta p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 0 0 2rem 0; /* Vertikaler Abstand zwischen den Sektionen auf mobilen Geräten */
+        width: 100%; /* Volle Breite auf mobilen Geräten */
+    }
+
+    .footer-section:last-child {
+        margin-bottom: 0; /* Kein Abstand nach der letzten Sektion */
+    }
+
+    .social-links img {
+        max-width: 28px; /* Etwas kleiner auf mobilen Geräten */
+        max-height: 28px;
+    }
+
+    .hero.about-us-hero {
+        height: 200px; /* Noch kleiner auf mobilen Geräten */
+    }
+
+    .hero.about-us-hero .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero.about-us-hero .hero-content p {
+        font-size: 1rem;
+    }
+
+    .coffee-comparison {
+        padding: 1rem;
+    }
+    
+    .coffee-comparison table {
+        font-size: 0.9rem;
+    }
+    
+    .coffee-comparison th, .coffee-comparison td {
+        padding: 8px;
+    }
+
+    #events {
+        padding-top: 3rem; /* Etwas weniger Abstand auf kleineren Bildschirmen */
+    }
+
+    #events h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .has-dropdown {
+        position: static;
+    }
+
+    .dropdown {
+        position: static;
+        display: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .has-dropdown:hover .dropdown,
+    .has-dropdown:focus-within .dropdown {
+        display: block;
+    }
+
+    .dropdown a {
+        padding-left: 2rem;
+    }
+
+    .event-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .event-category {
+        margin-bottom: 1.5rem;
+    }
+
+    #upcoming-events {
+        margin-top: 3rem;
+    }
+
+    .accordion-header {
+        font-size: 1rem;
+    }
+
+    .accordion-content {
+        font-size: 0.9rem;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    #about-concerts h2,
+    #upcoming-concerts h2 {
+        font-size: 1.8rem; /* Noch etwas kleiner auf mobilen Geräten */
+    }
+
+    #upcoming-concerts {
+        margin-top: 1.5rem;
+    }
+
+    .limited-width {
+        padding: 0 1rem; /* Geringerer Seitenabstand für sehr kleine Bildschirme */
+    }
+
+    #about-readings h2,
+    #upcoming-readings h2 {
+        font-size: 1.8rem;
+    }
+
+    .breadcrumb .container {
+        padding: 0 15px;
+    }
+    
+    .menu-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-tabs button {
+        margin: 5px 0; /* Vertikaler Abstand auf mobilen Geräten */
+        width: 80%; /* Breitere Buttons auf mobilen Geräten */
+        max-width: 300px; /* Maximale Breite für sehr breite Bildschirme */
+    }
+ }
