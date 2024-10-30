@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konzerte im Kaffee Inklusiv</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <header class="header-container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.png" alt="Logo Kaffee Inklusiv, zur Startseite">
+        </a>
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="menu.html">DRINKS AND FOOD</a></li>
+                <li class="has-dropdown">
+                    <a href="events.html" class="events-link active">EVENTS</a>
+                    <button id="events-dropdown-toggle" class="dropdown-toggle" aria-label="Untermenu Events" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-icon" aria-hidden="true">▼</span>
+                    </button>
+                    <ul class="dropdown" aria-labelledby="events-dropdown-toggle">
+                        <li><a href="konzerte.html" class="active" aria-current="page">Konzerte</a></li>
+                        <li><a href="lesungen.html">Lesungen</a></li>
+                        <li><a href="workshops.html">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="reservierung.html">RESERVIERUNG</a></li>
+                <li><a href="ueber%20uns.html">ÜBER UNS</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher">
+            <button class="language-button" aria-expanded="false" aria-controls="language-dropdown">
+                Kaffee inklusiv
+                <span class="dropdown-icon" aria-hidden="true">▼</span>
+            </button>
+            <ul id="language-dropdown" class="language-dropdown" role="listbox">
+                <li role="option" aria-selected="false">
+                    <a href="https://marstalder.github.io/Kaffee-Exklusiv/">Kaffee exklusiv</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="main-content" role="main" tabindex="-1">
+       
+        <section class="hero about-us-hero">
+            <img src="../assets/images/events.jpg" alt="">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Konzerte im Kaffee Inklusiv</h1>
+                    <p>Geniesse Live-Musik in gemütlicher Atmosphäre</p>
+                </div>
+            </div>
+        </section>
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="../index.html">
+                            <span itemprop="name">Home</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="events.html">
+                            <span itemprop="name">Events</span>
+                        </a>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name" aria-current="page">Konzerte</span>
+                        <meta itemprop="position" content="3" />
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <section id="about-concerts" class="section container">
+            <div class="limited-width">
+                <h2>Über unsere Konzerte</h2>
+                <p>Im Kaffee Inklusiv bieten wir regelmässig Live-Musik-Events, die von Jazz über Akustik-Sessions bis hin zu klassischen Abenden reichen. Unser intimes Ambiente schafft eine besondere Verbindung zwischen Künstlern und Publikum.</p>
+                <p>Geniesse hochwertige Musik in Kombination mit unserem ausgezeichneten Kaffee und einer Auswahl an leckeren Snacks. Unsere Konzerte sind der perfekte Ort, um einen entspannten Abend zu verbringen und neue musikalische Talente zu entdecken.</p>
+            </div>
+        </section>
+
+        <section id="upcoming-concerts" class="section container">
+            <div class="limited-width">
+              <h2>Kommende Konzerte</h2>
+              <ul class="accordion">
+                <li class="accordion-item">
+                  <h3>
+                    <button class="accordion-header" aria-expanded="false" aria-controls="panel1">
+                      Jazz-Abend mit Trio Swing
+                      <span class="accordion-icon" aria-hidden="true"></span>
+                    </button>
+                  </h3>
+                  <div id="panel1" class="accordion-content" aria-hidden="true">
+                    <div class="accordion-content-inner">
+                      <p><strong>Datum:</strong> 15. Mai 2024, 20:00 Uhr</p>
+                      <p><strong>Beschreibung:</strong> Geniesse einen Abend voller Swing und Jazz mit dem bekannten Trio Swing. Perfekt für Musikliebhaber und alle, die einen entspannten Abend suchen.</p>
+                      <a href="reservierung.html" class="button">Platz reservieren</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item">
+                  <h3>
+                    <button class="accordion-header" aria-expanded="false" aria-controls="panel2">
+                      Akustik-Session mit Sarah Sommer
+                      <span class="accordion-icon" aria-hidden="true"></span>
+                    </button>
+                  </h3>
+                  <div id="panel2" class="accordion-content" aria-hidden="true">
+                    <div class="accordion-content-inner">
+                      <p><strong>Datum:</strong> 22. Juni 2024, 19:30 Uhr</p>
+                      <p><strong>Beschreibung:</strong> Die talentierte Singer-Songwriterin Sarah Sommer präsentiert ihre neuesten Songs in einer intimen Akustik-Session.</p>
+                      <a href="reservierung.html" class="button">Platz reservieren</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item">
+                  <h3>
+                    <button class="accordion-header" aria-expanded="false" aria-controls="panel3">
+                      Klassischer Abend mit dem Streichquartett Harmonie
+                      <span class="accordion-icon" aria-hidden="true"></span>
+                    </button>
+                  </h3>
+                  <div id="panel3" class="accordion-content" aria-hidden="true">
+                    <div class="accordion-content-inner">
+                      <p><strong>Datum:</strong> 10. Juli 2024, 20:00 Uhr</p>
+                      <p><strong>Beschreibung:</strong> Erlebe einen Abend voller klassischer Musik mit dem renommierten Streichquartett Harmonie. Ein Genuss für alle Liebhaber der klassischen Musik.</p>
+                      <a href="reservierung.html" class="button">Platz reservieren</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+    </main>
+
+    <footer>
+        <h2 class="visually-hidden">Fussbereich</h2>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Kaffee Inklusiv<br>
+                Musterstrasse 123<br>
+                1234 Muster, Schweiz</p>
+                <p>Tel: <a href="tel:+41440000000">+41 44 000 00 00</a></p>
+                <p>E-Mail: <a href="mailto:info@kaffeeinklusiv.ch">info@kaffeeinklusiv.ch</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Öffnungszeiten</h3>
+                <p>Montag - Freitag: 08:00 - 20:00<br>
+                Samstag: 09:00 - 18:00<br>
+                Sonntag: 10:00 - 16:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Folge uns</h3>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://facebook.com" aria-label="Besuche unsere Facebook-Seite">
+                            <img src="../assets/images/facebook.png" alt="" width="40" height="40">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com" aria-label="Folge uns auf Instagram">
+                            <img src="../assets/images/instagram.png" alt="" width="40" height="40">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Schulungsseite der <a href="http://www.access-for-all.ch">Stiftung "Zugang für alle"</a>. Alle Rechte vorbehalten.</p>
+            <ul class="legal-links">
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="./public/barrierefreiheit.html">Barrierefreiheitserklärung</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
+
+    
