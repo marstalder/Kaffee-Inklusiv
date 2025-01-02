@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinks and Food - Kaffee Inklusiv</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./javascript.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <header class="header-container">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.png" alt="Logo Kaffee Inklusiv, zur Startseite">
+        </a>
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><span class="active" aria-current="page">DRINKS AND FOOD</span></li>
+                <li class="has-dropdown">
+                    <a href="events.html" class="events-link">EVENTS</a>
+                    <button id="events-dropdown-toggle" class="dropdown-toggle" aria-label="Untermenu Events" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-icon" aria-hidden="true">▼</span>
+                    </button>
+                    <ul class="dropdown" aria-labelledby="events-dropdown-toggle">
+                        <li><a href="konzerte.html">Konzerte</a></li>
+                        <li><a href="lesungen.html">Lesungen</a></li>
+                        <li><a href="workshops.html">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="reservierung.html">RESERVIERUNG</a></li>
+                <li><a href="ueber%20uns.html">ÜBER UNS</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher">
+            <button class="language-button" aria-expanded="false" aria-controls="language-dropdown">
+                Kaffee inklusiv
+                <span class="dropdown-icon" aria-hidden="true">▼</span>
+            </button>
+            <ul id="language-dropdown" class="language-dropdown" role="listbox">
+                <li role="option" aria-selected="false">
+                    <a href="https://marstalder.github.io/Kaffee-Exklusiv/">Kaffee exklusiv</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="main-content" role="main" tabindex="-1">
+        <section class="hero about-us-hero">
+            <img src="../assets/images/genuss.jpg" alt="">
+            <div class="hero-overlay">
+                <div class="menu">
+                    <h1>Unser Menü</h1>
+                    <p>Entdecke unsere Kaffeespezialitäten und Leckereien</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="section container">
+            <ul class="menu-tabs" role="tablist">
+                <li><button id="tab-kaffee" role="tab" aria-selected="true" aria-controls="kaffee" tabindex="0">Kaffee</button></li>
+                <li><button id="tab-kuchen" role="tab" aria-selected="false" aria-controls="kuchen" tabindex="-1">Kuchen</button></li>
+                <li><button id="tab-snacks" role="tab" aria-selected="false" aria-controls="snacks" tabindex="-1">Snacks</button></li>
+            </ul>
+               
+        
+            <div id="kaffee" class="menu-content active" role="tabpanel" aria-labelledby="tab-kaffee">
+
+                <h2>Kaffeespezialitäten</h2>
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <h3>Espresso</h3>
+                        <p>Intensiv und aromatisch</p>
+                        <p class="price">CHF 3.50</p>
+                    </li>
+                    <li class="menu-item">
+                        <h3>Cappuccino</h3>
+                        <p>Cremig mit perfektem Milchschaum</p>
+                        <p class="price">CHF 4.50</p>
+                    </li>
+                </ul>   
+                </div>
+            </div>
+        
+            <div id="kuchen" class="menu-content" role="tabpanel" aria-labelledby="tab-kuchen" hidden>
+                <h2>Hausgemachte Kuchen</h2>
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <h3>Apfelkuchen</h3>
+                        <p>Nach Grossmutters Rezept</p>
+                        <p class="price">CHF 5.00</p>
+                    </li>
+                    <li class="menu-item">
+                        <h3>Schokoladentorte</h3>
+                        <p>Reich und saftig</p>
+                        <p class="price">CHF 5.50</p>
+                    </li>
+                </ul>
+            </div>
+        
+            <div id="snacks" class="menu-content" role="tabpanel" aria-labelledby="tab-snacks" hidden>
+                <h2>Herzhafte Snacks</h2>
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <h3>Avocado Toast</h3>
+                        <p>Mit pochiertem Ei und Chiliflocken</p>
+                        <p class="price">CHF 12.00</p>
+                    </li>
+                    <li class="menu-item">
+                        <h3>Quiche Lorraine</h3>
+                        <p>Klassisch und cremig</p>
+                        <p class="price">CHF 9.50</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+            <section class="coffee-comparison">
+                <h2>Unsere Kaffeesorten im Vergleich</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kaffeesorte</th>
+                            <th>Herkunft</th>
+                            <th>Röstgrad</th>
+                            <th>Geschmacksprofil</th>
+                            <th>Empfohlene Zubereitung</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Äthiopischer Yirgacheffe</th>
+                            <td>Äthiopien</td>
+                            <td>Mittel</td>
+                            <td>Blumig, fruchtig mit Noten von Zitrus und Beeren</td>
+                            <td>Espresso, Americano</td>
+                        </tr>
+                        <tr>
+                            <th>Kolumbianischer Supremo</th>
+                            <td>Kolumbien</td>
+                            <td>Mittel-dunkel</td>
+                            <td>Nussig, mit Karamell- und Schokoladennoten</td>
+                            <td>Espresso, Cappuccino</td>
+                        </tr>
+                        <tr>
+                            <th>Sumatra Mandheling</th>
+                            <td>Indonesien</td>
+                            <td>Dunkel</td>
+                            <td>Erdig, vollmundig mit würzigen Noten</td>
+                            <td>Latte Macchiato, Americano</td>
+                        </tr>
+                        <tr>
+                            <th>Kenya AA</th>
+                            <td>Kenia</td>
+                            <td>Mittel</td>
+                            <td>Kräftig, mit Noten von Schwarzen Johannisbeeren und Wein</td>
+                            <td>Espresso, Cappuccino</td>
+                        </tr>
+                        <tr>
+                            <th>Guatemaltekischer Antigua</th>
+                            <td>Guatemala</td>
+                            <td>Mittel-hell</td>
+                            <td>Ausgewogen, mit Noten von Schokolade und leichter Säure</td>
+                            <td>Cappuccino, Latte Macchiato</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Unsere Baristas beraten dich gerne bei der Auswahl der Kaffeesorte und Zubereitung, die deinem Geschmack am besten entspricht.</p>
+            </section>
+    </main>
+
+    <footer>
+        <h2 class="visually-hidden">Fussbereich</h2>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Kaffee Inklusiv<br>
+                Musterstrasse 123<br>
+                1234 Muster, Schweiz</p>
+                <p>Tel: <a href="tel:+41440000000">+41 44 000 00 00</a></p>
+                <p>E-Mail: <a href="mailto:info@kaffeeinklusiv.ch">info@kaffeeinklusiv.ch</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Öffnungszeiten</h3>
+                <p>Montag - Freitag: 08:00 - 20:00<br>
+                Samstag: 09:00 - 18:00<br>
+                Sonntag: 10:00 - 16:00</p>
+            </div>
+            
+                <div class="footer-section">
+                    <h3>Folge uns</h3>
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://facebook.com" aria-label="Besuche unsere Facebook-Seite">
+                                <img src="../assets/images/facebook.png" alt="" width="40" height="40">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com" aria-label="Folge uns auf Instagram">
+                                <img src="../assets/images/instagram.png" alt="" width="40" height="40">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Schulungsseite der <a href="http://www.access-for-all.ch">Stiftung "Zugang für alle"</a>. Alle Rechte vorbehalten.</p>
+            <ul class="legal-links">
+                <li><a href="impressum.html">Impressum</a></li>
+                <!--<li><a href="./public/barrierefreiheit.html">Barrierefreiheitserklärung</a></li>-->
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
