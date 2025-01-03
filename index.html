@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willkommen - Kaffee Inklusiv</title>
+    <link rel="stylesheet" href="./public/styles.css">
+    <script src="./public/javascript.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <header class="header-container">
+        <a href="index.html" class="logo">
+            <img src="./assets/images/logo.png" alt="Logo Kaffee Inklusiv, zur Startseite">
+        </a>
+
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><span class="active" aria-current="page">HOME</span></li>
+                <li><a href="./public/menu.html">DRINKS AND FOOD</a></li>
+                <li class="has-dropdown">
+                    <a href="./public/events.html" class="events-link">EVENTS</a>
+                    <button id="events-dropdown-toggle" aria-label="Untermenu Events" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-icon" aria-hidden="true">▼</span>
+                    </button>
+                    <ul class="dropdown" aria-labelledby="events-dropdown-toggle">
+                        <li><a href="./public/konzerte.html">Konzerte</a></li>
+                        <li><a href="./public/lesungen.html">Lesungen</a></li>
+                        <li><a href="./public/workshops.html">Workshops</a></li>
+                    </ul>
+                </li>
+                <li><a href="./public/reservierung.html">RESERVIERUNG</a></li>
+                <li><a href="./public/ueber%20uns.html">ÜBER UNS</a></li>
+            </ul>
+        </nav>
+
+        <div class="language-switcher">
+            <button class="language-button" aria-expanded="false" aria-controls="language-dropdown">
+                Kaffee inklusiv
+                <span class="dropdown-icon" aria-hidden="true">▼</span>
+            </button>
+            <ul id="language-dropdown" class="language-dropdown" role="listbox">
+                <li role="option" aria-selected="false">
+                    <a href="https://marstalder.github.io/kaffee-exklusiv/">Kaffee exklusiv</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+
+    <main id="main-content" role="main" tabindex="-1">
+        <section id="home" class="section hero">
+            <img src="./assets/images/home.jpg" alt="">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Kaffee Inklusiv</h1>
+                    <p>Geniesse einen Moment der Ruhe in unserem gemütlichen Café</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="welcome" class="section container">
+            <h2>Willkommen in der Welt des Genusses</h2>
+            <p>Tauche ein in die aufregende Welt der modernen Gastronomie. 
+                In unserem Café 'Kaffee Exklusiv' verschmelzen innovative Kaffeekunst und gemütliche Atmosphäre 
+                zu einem einzigartigen Genusserlebnis.</p> 
+                
+<!-- Teaser-Bereich für andere Website-Bereiche -->
+<section class="site-teasers container">
+    <ul class="teaser-grid">
+      <!-- Speisekarte Teaser -->
+      <li class="site-teaser">
+        <img src="./assets/images/genuss.jpg" alt="" class="teaser-image">
+        <div class="teaser-content">
+          <h3>Unsere Speisekarte</h3>
+          <p>Von klassischen Kaffeespezialitäten bis zu hausgemachten Kuchen - entdecke unsere vielfältige Auswahl.</p>
+          <a href="./public/menu.html" class="teaser-link">Zur Speisekarte</a>
+        </div>
+    </li>
+  
+      <!-- Reservierung Teaser -->
+      <li class="site-teaser">
+        <img src="./assets/images/kaffee.jpg" alt="" class="teaser-image">
+        <div class="teaser-content">
+          <h3>Tisch reservieren</h3>
+          <p>Sichere dir deinen Lieblingsplatz oder plane deine nächste Feier bei uns.</p>
+          <a href="./public/reservierung.html" class="teaser-link">Jetzt reservieren</a>
+        </div>
+    </li>
+  
+      <!-- Team Teaser -->
+      <li class="site-teaser">
+        <img src="./assets/images/barista_team.jpg.jpg" alt="" class="teaser-image">
+        <div class="teaser-content">
+          <h3>Über uns</h3>
+          <p>Lerne unser Team kennen und erfahre mehr über unsere Philosophie.</p>
+          <a href="./public/ueber%20uns.html" class="teaser-link">Mehr zum Team</a>
+        </div>
+    </li>
+</ul>
+  </section>
+
+            <p>Ob du einen entspannten Moment allein, ein Treffen mit Freunden oder eine kleine Feier planst - 
+                unser engagiertes Team kreiert für jeden Anlass das perfekte kulinarische Erlebnis. 
+                Lass dich von unseren saisonalen Kreationen überraschen und geniesse den Komfort 
+                unseres stilvoll eingerichteten Cafés. Entdecke unsere wechselnden Kaffeespezialitäten 
+                und Kuchen, die lokale Zutaten mit internationalen Einflüssen kombinieren. 
+                Ob in unserem elegant gestalteten Innenbereich oder auf unserer gemütlichen Terrasse - 
+                wir freuen uns darauf, dich mit Geschmack und Service zu begeistern!</p>
+        </section>
+
+
+        <section id="cta" class="section container">
+            <h2>Entdecke unsere Events</h2>
+            <p>Von Kaffee-Verkostungen bis hin zu gemütlichen Leseabenden – im Kaffee Inklusiv ist immer etwas los. Erfahre mehr über unsere kommenden Veranstaltungen und sichere dir deinen Platz!</p>
+            <a href="./public/events.html" class="cta-button">Zu den Events</a>
+        </section>
+    </main>
+
+    <footer>
+        <h2 class="visually-hidden">Fussbereich</h2>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Kaffee Inklusiv<br>
+                Musterstrasse 123<br>
+                1234 Muster, Schweiz</p>
+                <p>Tel: <a href="tel:+41440000000">+41 44 000 00 00</a></p>
+                <p>E-Mail: <a href="mailto:info@kaffeeinklusiv.ch">info@kaffeeinklusiv.ch</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Öffnungszeiten</h3>
+                <p>Montag - Freitag: 08:00 - 20:00<br>
+                Samstag: 09:00 - 18:00<br>
+                Sonntag: 10:00 - 16:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Folge uns</h3>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://facebook.com" aria-label="Besuche unsere Facebook-Seite">
+                            <img src="./assets/images/facebook.png" alt="" width="40" height="40">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com" aria-label="Folge uns auf Instagram">
+                            <img src="./assets/images/instagram.png" alt="" width="40" height="40">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Schulungsseite der <a href="http://www.access-for-all.ch">Stiftung "Zugang für alle"</a>. Alle Rechte vorbehalten.</p>
+            <ul class="legal-links">
+                <li><a href="./public/impressum.html">Impressum</a></li>
+                <!--<li><a href="./public/barrierefreiheit.html">Barrierefreiheitserklärung</a></li>-->
+            </ul>
+        </div>
+        
+    </footer>
+    
+    <!--<div id="newsletter-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Abonniere unseren Newsletter</h2>
+            <p>Erhalte exklusive Angebote und bleibe über unsere neuesten Events informiert!</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Deine E-Mail-Adresse" required>
+                <button type="submit">Abonnieren</button>
+            </form>
+        </div>
+    </div>-->
+
+</body>
+</html>
